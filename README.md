@@ -1,5 +1,4 @@
 # kumlink
-Kudrick234, [23.03.2026 01:23]
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -36,102 +35,15 @@ Kudrick234, [23.03.2026 01:23]
             overflow-x: hidden;
         }
 
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: var(--bg-input); }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-input); border-radius: 10px; }
         ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
 
-        /* Login Screen */
-        .login-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 10%, #1a1a2a, #0a0a0f);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .login-card {
-            background: rgba(26, 26, 36, 0.95);
-            backdrop-filter: blur(20px);
-            border-radius: 48px;
-            padding: 40px 35px;
-            width: 90%;
-            max-width: 420px;
-            text-align: center;
-            border: 1px solid rgba(232, 62, 140, 0.3);
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
-        }
-
-        .login-card h2 {
-            background: linear-gradient(135deg, #e83e8c, #3a86ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            font-size: 36px;
-            font-weight: 800;
-            margin-bottom: 25px;
-        }
-
-        .invite-info {
-            background: rgba(0,0,0,0.3);
-            border-radius: 30px;
-            padding: 12px;
-            margin-bottom: 20px;
-            font-size: 13px;
-            color: #ffd700;
-        }
-
-        .login-card input {
-            width: 100%;
-            padding: 16px 20px;
-            margin: 12px 0;
-            background: var(--bg-input);
-            border: 1px solid var(--border);
-            border-radius: 40px;
-            color: white;
-            font-size: 16px;
-            transition: all 0.3s;
-        }
-
-        .login-card input:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 2px rgba(232, 62, 140, 0.2);
-        }
-
-        .login-card button {
-            width: 100%;
-            padding: 16px;
-            background: var(--gradient);
-            border: none;
-            border-radius: 40px;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 15px;
-            transition: transform 0.2s;
-        }
-
-        .login-card button:active { transform: scale(0.98); }
-
-        .hidden { display: none; }
-
-        /* Main App */
         .app {
-            display: none;
             min-height: 100vh;
             padding-bottom: 100px;
         }
 
-Kudrick234, [23.03.2026 01:23]
-/* Header */
         .header {
             background: rgba(15, 15, 23, 0.95);
             backdrop-filter: blur(10px);
@@ -148,7 +60,7 @@ Kudrick234, [23.03.2026 01:23]
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 800;
             background: var(--gradient);
             -webkit-background-clip: text;
@@ -157,64 +69,45 @@ Kudrick234, [23.03.2026 01:23]
             cursor: pointer;
         }
 
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .user-avatar {
-            width: 45px;
-            height: 45px;
-            background: var(--gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-        }
-
-        .user-nick { font-weight: 600; }
-        .creator-badge { background: var(--accent); font-size: 10px; padding: 2px 8px; border-radius: 20px; margin-left: 8px; }
-        .logout-btn { background: rgba(255,68,68,0.8); border: none; padding: 8px 20px; border-radius: 30px; color: white; cursor: pointer; }
-
-        /* Tabs */
         .tabs {
             display: flex;
-            gap: 12px;
-            padding: 20px 25px;
+            gap: 10px;
+            padding: 15px 20px;
             background: var(--bg-secondary);
             border-bottom: 1px solid var(--border);
             overflow-x: auto;
+            scrollbar-width: thin;
         }
 
         .tab-btn {
-            padding: 12px 28px;
+            padding: 10px 24px;
             background: var(--bg-input);
             border: none;
             border-radius: 40px;
             color: white;
             cursor: pointer;
             font-weight: 600;
+            font-size: 14px;
             white-space: nowrap;
+            transition: all 0.2s;
         }
         .tab-btn.active { background: var(--gradient); }
 
         .upload-section, .playlist-section, .tracks-section, .favorites-section, .artists-section {
-            margin: 20px 25px;
+            margin: 20px;
         }
 
         .section-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 12px;
         }
 
         .section-header h2 {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
             background: var(--gradient);
             -webkit-background-clip: text;
@@ -225,89 +118,91 @@ Kudrick234, [23.03.2026 01:23]
         .create-playlist-btn, .add-fav-btn {
             background: var(--gradient);
             border: none;
-            padding: 10px 24px;
+            padding: 8px 20px;
             border-radius: 40px;
             color: white;
             cursor: pointer;
             font-weight: 600;
+            font-size: 14px;
         }
 
-        .upload-area {
+Kudrick234, [23.03.2026 01:40]
+.upload-area {
             border: 2px dashed var(--accent);
             border-radius: 24px;
-            padding: 50px;
+            padding: 40px 20px;
             text-align: center;
             cursor: pointer;
             background: var(--bg-card);
+            transition: all 0.3s;
         }
-        .upload-area:hover { background: var(--bg-input); }
+        .upload-area:hover { background: var(--bg-input); border-color: var(--accent-blue); }
 
         .playlists-grid, .artists-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
             gap: 20px;
         }
 
         .playlist-card, .artist-card {
             background: var(--bg-card);
-            border-radius: 24px;
-            padding: 20px;
+            border-radius: 20px;
+            padding: 18px;
             cursor: pointer;
             transition: all 0.3s;
             border: 1px solid var(--border);
         }
-        .playlist-card:hover, .artist-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .playlist-card:hover, .artist-card:hover { transform: translateY(-4px); border-color: var(--accent); }
 
         .playlist-cover, .artist-cover {
-
-Kudrick234, [23.03.2026 01:23]
-width: 100%;
-            height: 150px;
+            width: 100%;
+            height: 140px;
             background: var(--gradient);
-            border-radius: 20px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 48px;
-            margin-bottom: 15px;
+            font-size: 44px;
+            margin-bottom: 12px;
         }
 
-        .playlist-title, .artist-name { font-size: 18px; font-weight: 700; margin-bottom: 5px; }
+        .playlist-title, .artist-name { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
         .playlist-count, .artist-tracks { font-size: 12px; color: var(--text-secondary); }
 
-        /* Track Items */
         .track-item {
             background: var(--bg-card);
-            border-radius: 20px;
-            padding: 15px 20px;
-            margin-bottom: 12px;
+            border-radius: 16px;
+            padding: 14px 18px;
+            margin-bottom: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 12px;
             border: 1px solid var(--border);
+            transition: all 0.2s;
         }
         .track-item:hover { border-color: var(--accent); }
 
-        .track-info { flex: 1; }
-        .track-name { font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+        .track-info { flex: 1; min-width: 150px; }
+        .track-name { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
         .track-artist { font-size: 12px; color: var(--text-secondary); }
 
-        .track-actions { display: flex; gap: 10px; }
+        .track-actions { display: flex; gap: 8px; flex-wrap: wrap; }
         .play-track-btn, .fav-track-btn, .delete-track-btn {
             background: var(--bg-input);
             border: none;
-            padding: 8px 20px;
+            padding: 6px 16px;
             border-radius: 30px;
             color: white;
             cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
         }
         .play-track-btn { background: var(--accent); }
         .fav-track-btn.active { background: var(--accent); }
         .delete-track-btn { background: #ff4444; }
 
-        /* Music Player */
         .music-player {
             position: fixed;
             bottom: 0;
@@ -316,82 +211,67 @@ width: 100%;
             background: rgba(15,15,23,0.98);
             backdrop-filter: blur(10px);
             border-top: 1px solid var(--accent);
-            padding: 15px 25px;
+            padding: 12px 20px;
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
             flex-wrap: wrap;
             z-index: 100;
         }
 
-        .player-info { flex: 1; min-width: 180px; }
-        .player-title { font-weight: 700; font-size: 16px; }
-        .player-artist { font-size: 12px; color: var(--text-secondary); }
+        .player-info { flex: 1; min-width: 150px; }
+        .player-title { font-weight: 700; font-size: 14px; }
+        .player-artist { font-size: 11px; color: var(--text-secondary); }
 
-        .player-controls { display: flex; gap: 15px; }
+        .player-controls { display: flex; gap: 12px; }
         .player-btn {
             background: var(--bg-input);
             border: none;
-            width: 44px;
-            height: 44px;
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
-            font-size: 20px;
+            font-size: 18px;
             cursor: pointer;
             color: white;
+            transition: all 0.2s;
+        }
+        .player-btn:hover { background: var(--accent); }
+
+        .player-progress { flex: 2; min-width: 180px; }
+        .progress-bar { width: 100%; height: 4px; background: var(--bg-input); border-radius: 3px; cursor: pointer; }
+
+Kudrick234, [23.03.2026 01:40]
+.progress-fill { width: 0%; height: 100%; background: var(--accent); border-radius: 3px; }
+        .time-info { display: flex; justify-content: space-between; font-size: 10px; margin-top: 4px; color: var(--text-secondary); }
+
+        @media (min-width: 1200px) {
+            .upload-section, .playlist-section, .tracks-section, .favorites-section, .artists-section {
+                max-width: 1400px;
+                margin: 25px auto;
+            }
+            .playlists-grid, .artists-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
         }
 
-        .player-progress { flex: 2; min-width: 200px; }
-        .progress-bar { width: 100%; height: 5px; background: var(--bg-input); border-radius: 3px; cursor: pointer; }
-        .progress-fill { width: 0%; height: 100%; background: var(--accent); border-radius: 3px; }
-        .time-info { display: flex; justify-content: space-between; font-size: 11px; margin-top: 6px; color: var(--text-secondary); }
+        @media (max-width: 768px) {
+            .header { padding: 12px 18px; }
+            .logo { font-size: 22px; }
+            .tabs { padding: 12px 15px; gap: 8px; }
+            .tab-btn { padding: 8px 18px; font-size: 13px; }
+            .section-header h2 { font-size: 18px; }
+            .playlist-cover, .artist-cover { height: 120px; font-size: 36px; }
+            .track-item { padding: 12px 15px; }
+        }
 
-        @media (max-width: 600px) {
-            .music-player { flex-direction: column; text-align: center; }
-            .player-progress { width: 100%; }
+        @media (max-width: 480px) {
             .playlists-grid, .artists-grid { grid-template-columns: 1fr; }
-            .tabs { padding: 15px; }
-            .tab-btn { padding: 8px 20px; font-size: 14px; }
+            .track-actions { width: 100%; justify-content: flex-end; }
         }
     </style>
 </head>
 <body>
-    <!-- Login Screen -->
-    <div class="login-screen" id="loginScreen">
-        <div class="login-card">
-            <h2>🎵 KudriLink</h2>
-            <div class="invite-info">
-                🔑 Введите инвайт-код для регистрации<br>
-                <span style="color:#e83e8c;">KUDRIK2025</span> — код создателя<br>
-                <span style="color:#3a86ff;">KUDRIK2026</span> — обычный код
-            </div>
-            <div id="inviteStep">
-
-Kudrick234, [23.03.2026 01:23]
-<input type="text" id="inviteCodeInput" placeholder="Инвайт-код" autocomplete="off">
-                <button id="checkInviteBtn">🔑 Войти по коду</button>
-            </div>
-            <div id="regStep" class="hidden">
-                <input type="email" id="emailInput" placeholder="Ваш email" autocomplete="off">
-                <input type="text" id="nickInput" placeholder="Ваш ник (уникальный)" autocomplete="off">
-                <input type="text" id="userNameInput" placeholder="Ваше имя">
-                <button id="registerBtn">🚀 Зарегистрироваться</button>
-                <button id="backToInviteBtn" style="background:#333;">← Назад</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main App -->
-    <div class="app" id="app">
+    <div class="app">
         <div class="header">
             <div class="logo" onclick="location.reload()">🎵 KudriLink</div>
-            <div class="user-info">
-                <div class="user-avatar" id="userAvatar">🎧</div>
-                <div>
-                    <span class="user-nick" id="displayNick"></span>
-                    <span id="creatorBadge" style="display:none;" class="creator-badge">👑 Создатель</span>
-                </div>
-                <button class="logout-btn" id="logoutBtn">Выйти</button>
-            </div>
         </div>
 
         <div class="tabs">
@@ -402,21 +282,19 @@ Kudrick234, [23.03.2026 01:23]
             <button class="tab-btn" data-tab="upload">⬆️ Загрузить</button>
         </div>
 
-        <!-- Upload Section -->
         <div class="upload-section" id="uploadTab" style="display: none;">
             <div class="upload-area" id="uploadArea">
-                <div style="font-size: 56px;">🎵</div>
-                <div style="margin: 20px 0; font-size: 18px;">Нажми или перетащи файл</div>
-                <div style="font-size: 13px; color: var(--text-secondary);">MP3, WAV, OGG до 20MB</div>
+                <div style="font-size: 52px;">🎵</div>
+                <div style="margin: 15px 0; font-size: 16px;">Нажми или перетащи файл</div>
+                <div style="font-size: 12px; color: var(--text-secondary);">MP3, WAV, OGG до 20MB</div>
                 <input type="file" id="musicFileInput" accept="audio/*" style="display: none;">
             </div>
-            <div style="margin-top: 20px;">
-                <input type="text" id="trackArtist" placeholder="Исполнитель" style="width: 100%; padding: 14px; background: var(--bg-input); border: none; border-radius: 40px; color: white; margin-bottom: 12px;">
-                <button id="uploadBtn" style="width: 100%; padding: 14px; background: var(--gradient); border: none; border-radius: 40px; color: white; font-weight: bold;">Загрузить трек</button>
+            <div style="margin-top: 18px;">
+                <input type="text" id="trackArtist" placeholder="Исполнитель" style="width: 100%; padding: 12px 18px; background: var(--bg-input); border: none; border-radius: 40px; color: white; margin-bottom: 12px;">
+                <button id="uploadBtn" style="width: 100%; padding: 12px; background: var(--gradient); border: none; border-radius: 40px; color: white; font-weight: bold;">Загрузить трек</button>
             </div>
         </div>
 
-        <!-- Playlists Section -->
         <div class="playlist-section" id="playlistsTab">
             <div class="section-header">
                 <h2>📀 Мои плейлисты</h2>
@@ -425,7 +303,6 @@ Kudrick234, [23.03.2026 01:23]
             <div class="playlists-grid" id="playlistsGrid"></div>
         </div>
 
-        <!-- Tracks Section -->
         <div class="tracks-section" id="tracksTab" style="display: none;">
             <div class="section-header">
                 <h2>🎵 Все треки</h2>
@@ -434,26 +311,23 @@ Kudrick234, [23.03.2026 01:23]
             <div id="tracksList"></div>
         </div>
 
-        <!-- Favorites Section -->
         <div class="favorites-section" id="favoritesTab" style="display: none;">
             <div class="section-header">
-                <h2>❤️ Избранные треки</h2>
+                <h2>❤️ Избранное</h2>
                 <button class="add-fav-btn" id="clearFavBtn">🗑️ Очистить</button>
             </div>
             <div id="favoritesList"></div>
         </div>
 
-Kudrick234, [23.03.2026 01:23]
-<!-- Artists Section -->
         <div class="artists-section" id="artistsTab" style="display: none;">
             <div class="section-header">
-                <h2>⭐ Популярные исполнители</h2>
+                <h2>⭐ Исполнители</h2>
             </div>
             <div class="artists-grid" id="artistsGrid"></div>
         </div>
 
-        <!-- Music Player -->
-        <div class="music-player" id="musicPlayer">
+Kudrick234, [23.03.2026 01:40]
+<div class="music-player" id="musicPlayer">
             <div class="player-info">
                 <div class="player-title" id="currentTrackName">Выберите трек</div>
                 <div class="player-artist" id="currentTrackArtist">-</div>
@@ -476,103 +350,71 @@ Kudrick234, [23.03.2026 01:23]
     </div>
 
     <script>
-        // ============= ДОПУСТИМЫЕ ИНВАЙТ-КОДЫ =============
-        const VALID_INVITES = {
-            "KUDRIK2025": { role: "creator", name: "Создатель" },
-            "KUDRIK2026": { role: "user", name: "Пользователь" }
-        };
+        // ============= ПОЛНЫЙ СПИСОК ТРЕКОВ =============
+        const artistsData = [
+            { name: "Моргенштерн", tracks: ["Дует", "Новый Мерин", "Розовое вино", "Плачу на техно", "Пушка", "Я хочу", "Грустная сука", "Хавчик", "Кисонька", "Виражи", "Кредо", "Трап", "Космос", "Феникс", "Девочка с каре"] },
+            { name: "Кишлак", tracks: ["Автомат", "Кино", "Без тебя", "На чиле", "Прованс", "Катана", "Мне пох", "Зима", "Танцы", "Ауф"] },
+            { name: "Скриптонит", tracks: ["Положение", "Это любовь", "Танцуй сама", "Космос", "Звезда", "Невеста", "Сложно", "Мультибренд"] },
+            { name: "Face", tracks: ["Юморист", "Бургер", "Я роняю запад", "Москва любит", "Красный флаг", "Бумеранг", "Патрон"] },
+            { name: "Oxxxymiron", tracks: ["Где нас нет", "Кто убил Марка?", "Полигон", "Биполярочка", "Не с начала", "Хоп-механика"] },
+            { name: "Баста", tracks: ["Сансара", "Выпускной", "Мама", "Солнцем", "Любовь", "Без тебя"] },
+            { name: "Хаски", tracks: ["Пуля-дура", "Убей меня", "Черным-черно", "Глаза", "Бесы", "Пироман"] },
+            { name: "GONE.Fludd", tracks: ["Кубик льда", "UFO", "Проснулся в темноте", "Чувствую", "Мамбл"] },
+            { name: "Big Baby Tape", tracks: ["Gimme the Loot", "Hood", "Bandz", "Trap Luv", "Платина"] },
+            { name: "Kizaru", tracks: ["Дежавю", "Черный Mercedes", "Тебя любил", "Money", "Тени"] },
+            { name: "Элджей", tracks: ["Розовое вино", "Минимал", "Дикая", "Улетай", "Sayonara"] },
+            { name: "Feduk", tracks: ["Розовое вино", "Моряк", "Плов", "Ой да", "Хулиган"] },
+            { name: "Макс Корж", tracks: ["Малый повзрослел", "Тает дым", "Слово пацана", "Жить в кайф", "Неважно"] }
+        ];
 
-        // ============= СИСТЕМА АККАУНТОВ =============
-        let currentUser = null;
-        let allUsers = JSON.parse(localStorage.getItem('kudrilink_users') || '[]');
-        let allTracks = JSON.parse(localStorage.getItem('kudrilink_global_tracks') || '[]');
-        let playlists = [];
-        let favorites = [];
+        // Генерация треков
+        let allTracks = JSON.parse(localStorage.getItem('kudrilink_tracks') || '[]');
+        
+        if (allTracks.length === 0) {
+            let id = 1;
+            for (let artist of artistsData) {
+                for (let track of artist.tracks) {
+                    allTracks.push({
+                        id: id++,
+                        name: track,
+                        artist: artist.name,
+                        url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+                        duration: ${Math.floor(2 + Math.random() * 3)}:${Math.floor(10 + Math.random() * 50)}
+                    });
+                }
+            }
+            localStorage.setItem('kudrilink_tracks', JSON.stringify(allTracks));
+        }
+
+        let playlists = JSON.parse(localStorage.getItem('kudrilink_playlists') || '[]');
+        let favorites = JSON.parse(localStorage.getItem('kudrilink_favorites') || '[]');
         let currentTrackIndex = 0;
         let audio = new Audio();
         let isPlaying = false;
-        let currentInviteRole = null;
 
-        // Проверка уникальности ника
-        function isNickUnique(nick, excludeEmail = null) {
-            return !allUsers.some(u => u.nick === nick && u.email !== excludeEmail);
+        if (playlists.length === 0) {
+
+Kudrick234, [23.03.2026 01:40]
+playlists = [
+                { id: Date.now(), name: "🔥 Мои любимые", tracks: [], cover: "🔥" },
+                { id: Date.now() + 1, name: "🎸 Хиты", tracks: allTracks.slice(0, 10).map(t => t.id), cover: "🎸" }
+            ];
+            localStorage.setItem('kudrilink_playlists', JSON.stringify(playlists));
         }
 
-        // ============= ГЕНЕРАЦИЯ 200+ ТРЕКОВ =============
-        const artists = [
-            "Моргенштерн", "Кишлак", "Скриптонит", "Face", "Oxxxymiron", "Баста", "Noize MC", "ATL", "Хаски", 
-            "GONE.Fludd", "LSP", "Фараон", "Дора", "Майот", "SALUKI", "Kai Angel", "SEEMEE", "White Punk",
-            "Big Baby Tape", "Kizaru", "ЛСП", "Элджей", "Feduk", "Макс Корж", "T-Fest", "JONY", "Rauf & Faik"
-        ];
-        
-        const trackNames = [
-            "Дует", "Новый Мерин", "Розовое вино", "Плачу на техно", "Пушка", "Я хочу", "Грустная сука", 
-            "Хавчик", "Кисонька", "Виражи", "Кредо", "Трап", "Космос", "Феникс", "Девочка с каре", "Малышка",
-            "Красный флаг", "Бумеранг", "Патрон", "Москва любит", "Кино", "Без тебя", "На чиле", "Прованс"
-        ];
-
-        function generateTracks() {
-            const tracks = [];
-            for (let i = 0; i < 220; i++) {
-                const artist = artists[Math.floor(Math.random() * artists.length)];
-                const track = trackNames[Math.floor(Math.random() * trackNames.length)];
-                tracks.push({
-                    id: Date.now() + i,
-                    name: ${track},
-                    artist: artist,
-                    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-                    duration: ${Math.floor(2 + Math.random() * 3)}:${Math.floor(10 + Math.random() * 50)},
-                    addedBy: "system",
-                    addedByNick: "Система"
-                });
-            }
-            return tracks;
+        function saveAll() {
+            localStorage.setItem('kudrilink_tracks', JSON.stringify(allTracks));
+            localStorage.setItem('kudrilink_playlists', JSON.stringify(playlists));
+            localStorage.setItem('kudrilink_favorites', JSON.stringify(favorites));
         }
 
-        // Загрузка данных пользователя
-
-Kudrick234, [23.03.2026 01:23]
-function loadUserData() {
-            if (!currentUser) return;
-            
-            const userData = JSON.parse(localStorage.getItem(kudrilink_user_${currentUser.email}) || '{"playlists":[],"favorites":[]}');
-            playlists = userData.playlists || [];
-            favorites = userData.favorites || [];
-            
-            if (playlists.length === 0) {
-                playlists = [
-                    { id: Date.now(), name: "🔥 Мой плейлист", tracks: allTracks.slice(0, 15).map(t => t.id), cover: "🔥" },
-                    { id: Date.now()+1, name: "🎸 Любимое", tracks: allTracks.slice(10, 25).map(t => t.id), cover: "🎸" }
-                ];
-                saveUserData();
-            }
-            
-            renderPlaylists();
-            renderFavorites();
-        }
-
-        function saveUserData() {
-            if (!currentUser) return;
-            localStorage.setItem(kudrilink_user_${currentUser.email}, JSON.stringify({
-                playlists: playlists,
-                favorites: favorites
-            }));
-        }
-
-        function saveGlobalTracks() {
-            localStorage.setItem('kudrilink_global_tracks', JSON.stringify(allTracks));
-        }
-
-        // Инициализация глобальных треков
-        if (allTracks.length === 0) {
-            allTracks = generateTracks();
-            saveGlobalTracks();
-        }
-
-        // UI Рендер
         function renderPlaylists() {
             const grid = document.getElementById('playlistsGrid');
             if (!grid) return;
+            if (playlists.length === 0) {
+                grid.innerHTML = '<div style="text-align:center; padding:40px; color:var(--text-secondary); grid-column:1/-1;">📀 Нет плейлистов. Создайте первый!</div>';
+                return;
+            }
             grid.innerHTML = playlists.map(playlist => {
                 const trackCount = playlist.tracks.filter(id => allTracks.find(t => t.id === id)).length;
                 return 
@@ -588,18 +430,21 @@ function loadUserData() {
         function renderTracks(tracks = allTracks) {
             const container = document.getElementById('tracksList');
             if (!container) return;
+            if (tracks.length === 0) {
+                container.innerHTML = '<div style="text-align:center; padding:40px; color:var(--text-secondary);">🎵 Нет треков. Загрузите музыку!</div>';
+                return;
+            }
             container.innerHTML = tracks.map((track, idx) => 
                 <div class="track-item">
                     <div class="track-info">
                         <div class="track-name">${escapeHtml(track.name)}</div>
                         <div class="track-artist">${escapeHtml(track.artist)}</div>
                         <div class="track-duration">${track.duration}</div>
-                        <div style="font-size:10px; color:var(--text-secondary); margin-top:4px;">📌 Добавил: ${track.addedByNick || 'Система'}</div>
                     </div>
                     <div class="track-actions">
                         <button class="play-track-btn" onclick="playTrack(${allTracks.indexOf(track)})">▶️</button>
                         <button class="fav-track-btn ${favorites.includes(track.id) ? 'active' : ''}" onclick="toggleFavorite(${track.id})">❤️</button>
-                        ${currentUser && (currentUser.role === "creator" || track.addedBy === currentUser.email) ? <button class="delete-track-btn" onclick="deleteTrack(${track.id})">🗑️</button> : ''}
+                        <button class="delete-track-btn" onclick="deleteTrack(${track.id})">🗑️</button>
                     </div>
                 </div>
             ).join('');
@@ -611,18 +456,18 @@ function loadUserData() {
             const favTracks = allTracks.filter(t => favorites.includes(t.id));
             if (favTracks.length === 0) {
                 container.innerHTML = '<div style="text-align:center; padding:40px; color:var(--text-secondary);">❤️ Нет избранных треков</div>';
-
-Kudrick234, [23.03.2026 01:23]
-return;
+                return;
             }
-            container.innerHTML = favTracks.map((track, idx) => 
+            container.innerHTML = favTracks.map((track, idx) => `
                 <div class="track-item">
                     <div class="track-info">
                         <div class="track-name">${escapeHtml(track.name)}</div>
                         <div class="track-artist">${escapeHtml(track.artist)}</div>
                         <div class="track-duration">${track.duration}</div>
                     </div>
-                    <div class="track-actions">
+
+Kudrick234, [23.03.2026 01:40]
+<div class="track-actions">
                         <button class="play-track-btn" onclick="playTrack(${allTracks.indexOf(track)})">▶️</button>
                         <button class="fav-track-btn active" onclick="toggleFavorite(${track.id})">❤️</button>
                     </div>
@@ -638,6 +483,10 @@ return;
                 artistStats[t.artist] = (artistStats[t.artist] || 0) + 1;
             });
             const topArtists = Object.entries(artistStats).sort((a, b) => b[1] - a[1]).slice(0, 18);
+            if (topArtists.length === 0) {
+                container.innerHTML = '<div style="text-align:center; padding:40px; color:var(--text-secondary); grid-column:1/-1;">⭐ Нет исполнителей</div>';
+                return;
+            }
             container.innerHTML = topArtists.map(([artist, count]) => 
                 <div class="artist-card" onclick="filterByArtist('${escapeHtml(artist)}')">
                     <div class="artist-cover">🎤</div>
@@ -685,7 +534,7 @@ return;
             document.getElementById('progressFill').style.width = percent + '%';
             const minutes = Math.floor(audio.currentTime / 60);
             const seconds = Math.floor(audio.currentTime % 60);
-            document.getElementById('currentTime').innerText = ${minutes}:${seconds.toString().padStart(2, '0')};
+            document.getElementById('currentTime').innerText = ${minutes}:${seconds.toString().padStart(2, '0')}`;
         }
 
         window.toggleFavorite = (trackId) => {
@@ -695,21 +544,21 @@ return;
             } else {
                 favorites.splice(index, 1);
             }
-            saveUserData();
+            saveAll();
             renderTracks();
             renderFavorites();
         };
 
-Kudrick234, [23.03.2026 01:23]
-window.deleteTrack = (trackId) => {
+        window.deleteTrack = (trackId) => {
             if (confirm('Удалить трек?')) {
-                allTracks = allTracks.filter(t => t.id !== trackId);
+
+Kudrick234, [23.03.2026 01:40]
+allTracks = allTracks.filter(t => t.id !== trackId);
                 playlists.forEach(p => {
                     p.tracks = p.tracks.filter(id => id !== trackId);
                 });
                 favorites = favorites.filter(id => id !== trackId);
-                saveGlobalTracks();
-                saveUserData();
+                saveAll();
                 renderTracks();
                 renderPlaylists();
                 renderFavorites();
@@ -723,12 +572,10 @@ window.deleteTrack = (trackId) => {
                 name: name,
                 artist: artist || 'Неизвестен',
                 url: url,
-                duration: duration || '3:00',
-                addedBy: currentUser.email,
-                addedByNick: currentUser.nick
+                duration: duration || '3:00'
             };
             allTracks.unshift(newTrack);
-            saveGlobalTracks();
+            saveAll();
             renderTracks();
             renderPlaylists();
             renderArtists();
@@ -743,7 +590,7 @@ window.deleteTrack = (trackId) => {
                 cover: '🎵'
             };
             playlists.push(newPlaylist);
-            saveUserData();
+            saveAll();
             renderPlaylists();
         }
 
@@ -753,85 +600,13 @@ window.deleteTrack = (trackId) => {
             return div.innerHTML;
         }
 
-        // ============= РЕГИСТРАЦИЯ ПО ИНВАЙТ-КОДУ =============
-        document.getElementById('checkInviteBtn').onclick = () => {
-            const code = document.getElementById('inviteCodeInput').value.trim().toUpperCase();
-            
-            if (!VALID_INVITES[code]) {
-                alert('❌ Неверный инвайт-код! Доступ запрещён.');
-                return;
-            }
-            
-            currentInviteRole = VALID_INVITES[code].role;
-            document.getElementById('inviteStep').classList.add('hidden');
-            document.getElementById('regStep').classList.remove('hidden');
-        };
-
-        document.getElementById('backToInviteBtn').onclick = () => {
-            document.getElementById('regStep').classList.add('hidden');
-            document.getElementById('inviteStep').classList.remove('hidden');
-            document.getElementById('emailInput').value = '';
-            document.getElementById('nickInput').value = '';
-            document.getElementById('userNameInput').value = '';
-        };
-
-        document.getElementById('registerBtn').onclick = () => {
-            const email = document.getElementById('emailInput').value.trim();
-            const nick = document.getElementById('nickInput').value.trim();
-            const name = document.getElementById('userNameInput').value.trim() || nick;
-            
-            if (!email || !email.includes('@')) {
-                alert('❌ Введите корректный email');
-                return;
-            }
-            if (!nick) {
-                alert('❌ Введите ник');
-                return;
-            }
-            if (!isNickUnique(nick)) {
-                alert('❌ Этот ник уже занят! Выберите другой');
-                return;
-            }
-            if (!currentInviteRole) {
-                alert('❌ Ошибка: нет инвайт-кода');
-                return;
-            }
-            
-            currentUser = { 
-                email: email, 
-                nick: nick,
-                name: name,
-                avatar: '🎧',
-                role: currentInviteRole
-            };
-            
-            allUsers.push({ email: email, nick: nick, name: name, role: currentInviteRole });
-
-Kudrick234, [23.03.2026 01:23]
-localStorage.setItem('kudrilink_users', JSON.stringify(allUsers));
-            localStorage.setItem('kudrilink_current_user', JSON.stringify(currentUser));
-            
-            document.getElementById('loginScreen').style.display = 'none';
-            document.getElementById('app').style.display = 'block';
-            document.getElementById('displayNick').innerText = currentUser.nick;
-            document.getElementById('userAvatar').innerText = currentUser.avatar;
-            
-            if (currentUser.role === 'creator') {
-                document.getElementById('creatorBadge').style.display = 'inline';
-            }
-            
-            loadUserData();
-            renderTracks();
-            renderArtists();
-        };
-
-        // ============= ЗАГРУЗКА МУЗЫКИ =============
+        // Загрузка музыки
         let pendingFile = null;
         document.getElementById('uploadArea').onclick = () => document.getElementById('musicFileInput').click();
         document.getElementById('musicFileInput').onchange = (e) => {
             pendingFile = e.target.files[0];
             if (pendingFile) {
-                document.getElementById('uploadArea').innerHTML = <div style="font-size: 56px;">✅</div><div style="margin: 20px 0;">${pendingFile.name}</div>;
+                document.getElementById('uploadArea').innerHTML = <div style="font-size: 52px;">✅</div><div style="margin: 15px 0;">${pendingFile.name}</div>;
             }
         };
         
@@ -845,14 +620,13 @@ localStorage.setItem('kudrilink_users', JSON.stringify(allUsers));
             reader.onload = (e) => {
                 const url = e.target.result;
                 addTrack(pendingFile.name.replace('.mp3', '').replace('.wav', ''), artist, url, '3:00');
-                document.getElementById('uploadArea').innerHTML = <div style="font-size: 56px;">🎵</div><div style="margin: 20px 0;">Нажми или перетащи файл</div><div style="font-size: 13px;">MP3, WAV, OGG до 20MB</div>;
+                document.getElementById('uploadArea').innerHTML = <div style="font-size: 52px;">🎵</div><div style="margin: 15px 0;">Нажми или перетащи файл</div><div style="font-size: 12px;">MP3, WAV, OGG до 20MB</div>;
                 document.getElementById('trackArtist').value = '';
                 pendingFile = null;
             };
             reader.readAsDataURL(pendingFile);
         };
 
-        // ============= ПЛЕЙЛИСТЫ =============
         document.getElementById('createPlaylistBtn').onclick = () => {
             const name = prompt('Название плейлиста:');
             if (name) addPlaylist(name);
@@ -861,7 +635,7 @@ localStorage.setItem('kudrilink_users', JSON.stringify(allUsers));
         document.getElementById('clearFavBtn').onclick = () => {
             if (confirm('Удалить все избранные треки?')) {
                 favorites = [];
-                saveUserData();
+                saveAll();
                 renderTracks();
                 renderFavorites();
             }
@@ -871,7 +645,6 @@ localStorage.setItem('kudrilink_users', JSON.stringify(allUsers));
             document.querySelector('.tab-btn[data-tab="favorites"]').click();
         };
 
-        // ============= ПЛЕЕР =============
         document.getElementById('playPauseBtn').onclick = () => {
             if (isPlaying) {
                 audio.pause();
@@ -887,7 +660,8 @@ localStorage.setItem('kudrilink_users', JSON.stringify(allUsers));
             if (currentTrackIndex > 0) playTrack(currentTrackIndex - 1);
         };
 
-        document.getElementById('nextBtn').onclick = () => {
+Kudrick234, [23.03.2026 01:40]
+document.getElementById('nextBtn').onclick = () => {
             if (currentTrackIndex < allTracks.length - 1) playTrack(currentTrackIndex + 1);
         };
 
@@ -897,8 +671,6 @@ localStorage.setItem('kudrilink_users', JSON.stringify(allUsers));
             audio.currentTime = percent * audio.duration;
         };
 
-Kudrick234, [23.03.2026 01:23]
-// ============= ТАБЫ =============
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.onclick = () => {
                 document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -916,28 +688,11 @@ Kudrick234, [23.03.2026 01:23]
             };
         });
 
-        document.getElementById('logoutBtn').onclick = () => {
-            localStorage.removeItem('kudrilink_current_user');
-            location.reload();
-        };
-
-        // Автовход
-        const savedUser = localStorage.getItem('kudrilink_current_user');
-        if (savedUser) {
-            currentUser = JSON.parse(savedUser);
-            document.getElementById('loginScreen').style.display = 'none';
-            document.getElementById('app').style.display = 'block';
-            document.getElementById('displayNick').innerText = currentUser.nick;
-            document.getElementById('userAvatar').innerText = currentUser.avatar || '🎧';
-            
-            if (currentUser.role === 'creator') {
-                document.getElementById('creatorBadge').style.display = 'inline';
-            }
-            
-            loadUserData();
-            renderTracks();
-            renderArtists();
-        }
+        renderPlaylists();
+        renderTracks();
+        renderArtists();
+        renderFavorites();
     </script>
 </body>
 </html>
+
